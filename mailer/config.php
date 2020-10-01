@@ -7,7 +7,7 @@
 
 /* =========================================== MAIN RECIPIENT  =========================================== */
 
-$to = 'your_email@domain.com';						// TODO: Replace with your main email
+$to = 'adamke283@gmail.com';						// TODO: Replace with your main email
 
 /* ========================================= APPOINTMENT FORM ============================================ */
 
