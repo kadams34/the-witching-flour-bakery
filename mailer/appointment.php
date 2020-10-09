@@ -5,7 +5,7 @@
  * Author URI: http://themeforest.net/user/webisir
 */
 
-require('config.php');
+require('mailer/config.php');
 
 if ( isset( $_POST['email'] ) ) {
 
@@ -37,7 +37,7 @@ if ( isset( $_POST['email'] ) ) {
 		$message .= '<tr><td>Size</td><td><strong>' . $size . '</strong></td></tr>';
 		$message .= '<tr><td>Color</td><td><strong>' . $color . '</strong></td></tr>';
 		$message .= '<tr><td>Description</td><td><strong>' . $description . '</strong></td></tr>';
-		$message .= '<tr><td>Artist</td><td><strong>' . $artist . '</strong></td></tr>';
+		// $message .= '<tr><td>Artist</td><td><strong>' . $artist . '</strong></td></tr>';
 		$message .= '</table></body></html>';
 
 		// required for SMTP
@@ -45,7 +45,7 @@ if ( isset( $_POST['email'] ) ) {
 			date_default_timezone_set('Etc/UTC');
 		}
 
-		require('PHPMailer/PHPMailerAutoload.php');
+		@require('PHPMailer/PHPMailerAutoload.php');
 
 		$mail = new PHPMailer;
 
