@@ -270,7 +270,7 @@
                       var feed = new Instafeed({
                         accessToken: InstagramToken,
                         limit: 12,
-                        template: '<div class="col-md-3 col-6 mb-4"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" class="img-fluid" /></a></div>',
+                        template: '<div class="col-md-3 col-6 mb-4 imglist"><a href="{{link}}" data-fancybox="images" data-caption="{{caption}}"><img title="{{caption}}" src="{{image}}" class="img-fluid" /></a></div>',
                         // transform: function(item) {
                         //   var d = new Date(item.timestamp);
                         //   item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');
@@ -578,7 +578,7 @@
 
                     <div class="row">
                         <div class="col text-center pb-5">
-                            <h2>Doughnuts available at these locations, or click <a href="http://theshopabq.com" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>HERE</a> to order for saturday pickup!</h2>
+                            <h2>Doughnuts and other pastries available at these locations, or click <a style="color: mediumslateblue" href="http://theshopabq.com" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>HERE</a> to order for saturday pickup!</h2>
                         </div>
                     </div>
 
@@ -638,12 +638,12 @@
                         <div class="col-md-3 artist">
 
 
-                            <a href="http://www.castlecoffeeco.com/">
+                            <a href="https://www.littlebearcoffeeco.com/">
                                 <img class="rounded" src="img/donuts/littlebear.jpg" width="125" height="125" alt="Tattoo Artist C">
                             </a>
 
                             <h3 style="margin-bottom: 5px" class="artist-name">Little Bear Coffee Co.</h3>
-                            <p>*Only crossaints available here</p>
+                            <p>*ONLY Croissants available @ Little Bear</p>
                             <!--                                <ul class="social-links">-->
                             <!--                                    <li><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
                             <!--                                    <li><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
