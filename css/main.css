@@ -76,11 +76,14 @@
 /* Open Sans */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 
+/* Gelasio */
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 /*--------------------------------------------------------------
     2.0 - Font Awesome 4.7.0
 --------------------------------------------------------------*/
 
-@import url('font-awesome.min.css');
+/*@import url('fontawesome.min.css');*/
 
 /*--------------------------------------------------------------
     3.0 - Boostrap Grid System
@@ -379,7 +382,7 @@ h5,
 h6 {
     margin-bottom: 20px;
     color: #161616;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Gelasio', serif;
     font-weight: bold;
 }
 
@@ -2046,9 +2049,9 @@ footer {
     background-color: #121212 !important;
 }
 
-footer .row {
-    display: table;
-}
+/*footer .row {*/
+/*    display: table;*/
+/*}*/
 
 .footer-col {
     display: table-cell;
