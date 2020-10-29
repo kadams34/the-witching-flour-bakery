@@ -725,3 +725,10 @@
     });
 
 } )( jQuery );
+
+function getCurrentYear() {
+    let year = new Date().getFullYear()
+    document.getElementById('copyright').innerHTML = `© The Witching Flour Bakery | ${year}<br>Website created by: <a href="https://github.com/kadams34">Kevin Adams</a>`
+}
+
+getCurrentYear()

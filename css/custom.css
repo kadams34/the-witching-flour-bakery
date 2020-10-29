@@ -10,3 +10,10 @@
 /*--------------------------------------------------------------
     Custom CSS
 ----------------------------------------------------------------
+ */
+
+.copy-right-content p,
+.copy-right-content a {
+    text-transform: uppercase;
+    color: #fff;
+}

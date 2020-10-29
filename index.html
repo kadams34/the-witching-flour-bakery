@@ -14,6 +14,7 @@
               crossorigin="anonymous" />
         <link rel="stylesheet" href="css/fontawesome.min.css">
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/custom.css" />
     </head>
     <body class="one-page">
 
@@ -22,7 +23,11 @@
             <header id="master-header" class="full-screen overlayed">
 
                 <div class="bg-overlay"></div>
-                <div id="media-container"></div>
+                <div id="media-container">
+                    <video id="video-background" preload="auto" loop="loop" muted="muted">
+                        <source src="img/IMG_1303.mov" type="video/mp4">
+                    </video>
+                </div>
 
                 <div class="top-header">
 
@@ -919,7 +924,13 @@
                 </div>
 
                 <div class="copyright">
-                    &copy; 2020 - <strong>The Witching Flour Bakery</strong>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="copy-right-content">
+                                <p id="copyright" class="m-0"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </footer>
@@ -949,10 +960,10 @@
                 crossorigin="anonymous">
         </script>
 
-        <script>
-          var imgSlider = ['img/witching-flour/witching-flour-bg-1.jpg', 'img/witching-flour/witching-flour-bg-2.jpg', 'img/witching-flour/witching-flour-bg-3.jpg', 'img/witching-flour/witching-flour-bg-4.jpg'];
-          $('#media-container').backstretch(imgSlider, { duration: 3000, fade: 750 });
-        </script>
+<!--        <script>-->
+<!--          var imgSlider = ['img/witching-flour/witching-flour-bg-1.jpg', 'img/witching-flour/witching-flour-bg-2.jpg', 'img/witching-flour/witching-flour-bg-3.jpg', 'img/witching-flour/witching-flour-bg-4.jpg'];-->
+<!--          $('#media-container').backstretch(imgSlider, { duration: 3000, fade: 750 });-->
+<!--        </script>-->
 
         <!-- Google Map Scripts -->
 <!--        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>-->
