@@ -1281,6 +1281,14 @@ h6 i {
     line-height: 1.2;
 }
 
+.cta h3 {
+    margin-bottom: 0;
+    padding: 0 20px;
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
 .cta-info {
     font-size: 20px;
 }
@@ -2310,11 +2318,12 @@ hr.lg-divider {
 .btn.light,
 .btn:hover,
 #master-header .btn:hover {
-    background-color: #BDC3C7;
+    background-color: #a892a4;
+    color: white;
 }
 
 .btn.light:hover {
-    background-color: #161616;
+    background-color: #544952;
     color: #ffffff;
 }
 

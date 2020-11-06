@@ -17,3 +17,19 @@
     text-transform: uppercase;
     color: #fff;
 }
+
+.btn-purple,
+.btn:hover,
+#master-header .btn:hover {
+    background-color: #544952;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: #a892a4;
+    color: #ffffff;
+}
+
+.card {
+    border: none;
+}
