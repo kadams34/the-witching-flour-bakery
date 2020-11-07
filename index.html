@@ -38,10 +38,12 @@
                         <a id="nav-toggle" href="#"><span></span></a>
                         <nav id="nav-menu">
                             <ul>
-                                <li><h4><a title="Last Works" href="#last-works">Gallery</a></h4></li>
-                                <li><h4><a title="Services" href="#services">About/Services</a></h4></li>
-                                <li><h4><a title="Artists" href="#artists">Donuts</a></h4></li>
-                                <li><h4><a title="Appointment" href="#appointment">Contact/Order Form</a></h4></li>
+                                <li><h4><a title="Gallery" href="#gallery">Gallery</a></h4></li>
+                                <li><h4><a title="About" href="#about">About</a></h4></li>
+                                <li><h4><a title="Custom Cake Order Form" href="#cake-form">Custom Cakes</a></h4></li>
+                                <li><h4><a title="Donuts" href="#donuts">Donuts</a></h4></li>
+                                <li><h4><a title="Holiday Pies" href="#pies">Holiday Pies</a></h4></li>
+                                <li><h4><a title="Email The Witching Flour" href="mailto:thewitchingflourbakery@gmail.com">Contact</a></h4></li>
                             </ul>
                         </nav>
 
@@ -78,7 +80,7 @@
 
             <!-- ============ Last Works - START ============ -->
 
-            <div id="last-works" class="section">
+            <div id="gallery" class="section">
 
                 <!--                    <div class="section-title">-->
                 <!--                        <h2>Last Works</h2>-->
@@ -263,29 +265,49 @@
                         <h2>Follow our <a href="https://www.instagram.com/the_witching_flour_bakery/" style="color: #a892a4">Instagram</a>!</h2>
                         <h6 style="text-transform: none" class="mb-0">Stay up to date with all of our announcements, specials, and surprise treats!!</h6>
                     </div>
-                    <div class="row py-3" id="instafeed"></div>
+<!--                    <div class="row py-3" id="instafeed"></div>-->
 
-                    <!-- The Token Agent service - make sure to use your own URL here -->
-                    <script src='https://squidly.herokuapp.com/token.js'></script>
+<!--                    &lt;!&ndash; The Token Agent service - make sure to use your own URL here &ndash;&gt;-->
+<!--                    <script src='https://squidly.herokuapp.com/token.js'></script>-->
 
-                    <!-- The Instafeed.js library (Don't use this URL in production!) -->
-                    <script src="js/instafeed.min.js"></script>
+<!--                    &lt;!&ndash; The Instafeed.js library (Don't use this URL in production!) &ndash;&gt;-->
+<!--                    <script src="js/instafeed.min.js"></script>-->
 
-                    <!-- Configure and run instafeed -->
+<!--                    &lt;!&ndash; Configure and run instafeed &ndash;&gt;-->
+<!--                    <script>-->
+<!--                      //console.log(Instafeed)-->
+<!--                      var feed = new Instafeed({-->
+<!--                        accessToken: InstagramToken,-->
+<!--                        limit: 12,-->
+<!--                        template: '<div class="col-md-3 col-6 mb-4 imglist"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" class="img-fluid" /></a></div>',-->
+<!--                        // transform: function(item) {-->
+<!--                        //   var d = new Date(item.timestamp);-->
+<!--                        //   item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');-->
+<!--                        //   return item;-->
+<!--                        // }-->
+<!--                      });-->
+
+<!--                      feed.run();-->
+<!--                    </script>-->
+<!--                    <div class="powr-instagram-feed" id="27251691_1604690622"></div><script src="https://www.powr.io/powr.js?platform=bootstrap"></script>-->
+                    <div id="instagram-feed2" class="instagram_feed"></div>
+                    <script src="js/InstagramFeed.min.js"></script>
                     <script>
-                      //console.log(Instafeed)
-                      var feed = new Instafeed({
-                        accessToken: InstagramToken,
-                        limit: 12,
-                        template: '<div class="col-md-3 col-6 mb-4 imglist"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" class="img-fluid" /></a></div>',
-                        // transform: function(item) {
-                        //   var d = new Date(item.timestamp);
-                        //   item.date = [d.getDate(), d.getMonth(), d.getYear()].join('/');
-                        //   return item;
-                        // }
-                      });
-
-                      feed.run();
+                      (function(){
+                        new InstagramFeed({
+                          'username': 'the_witching_flour_bakery',
+                          'container': document.getElementById("instagram-feed2"),
+                          'display_profile': false,
+                          'display_biography': false,
+                          'display_gallery': true,
+                          'display_captions': false,
+                          'callback': null,
+                          'styling': true,
+                          'items': 9,
+                          'items_per_row': 3,
+                          'margin': 1
+                        });
+                      })();
                     </script>
                 </div>
             </div>
@@ -294,10 +316,10 @@
 
             <!-- ============ Services - START ============ -->
 
-            <div id="services" class="section dark">
+            <div id="about" class="section dark">
 
                 <div class="section-title">
-                    <h2>About us</h2>
+                    <h2>About The Witching Flour</h2>
                 </div>
 
                 <div class="content container">
@@ -310,7 +332,7 @@
                             <p>Here's an amazing video project I have been working on with my incredibly talented friend <a href="https://www.instagram.com/brownbrownsmash/" style="color: white">@brownbrownsmash</a> who was more than happy to help and encourage me to make it happen! He was so fun to work with and did such a beautiful job artistically capturing the small batch world of baking. Sort of like “a day in the life of a baker."</p>
                         </div>
                         <div class="col-md-6 text-center my-5">
-                            <a data-fancybox href="img/witching-flour/IMG_1303.mp4">
+                            <a data-fancybox href="https://youtu.be/fgq6BXy5NGs">
                                 <img class="img-fluid" src="img/witching-flour/witching-flour-video-thumbnail.png" alt="video cover" />
                             </a>
                         </div>
@@ -355,6 +377,9 @@
                 <div class="content container">
 
                     <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/witching-flour/witching-flour-kelly.jpg" alt="Studio Image">
+                        </div>
 
                         <div class="col-md-6">
 
@@ -366,14 +391,14 @@
                                 unusual, dark and occult. I love that there is such a juxtaposition between the
                                 light, airiness of the treats and the sort of witchcraft-y/wizardry/conjuring behind
                                 the concept of the bakery. I wanted the freedom to express myself, and to be as
-                                creative as possible, which is what started the process of opening a business. It
-                                hasn’t been easy, but I have been so humbled during this entire process by all of
+                                creative as possible, which is what started the process of opening a business.</p>
+                            <p>It hasn’t been easy, but I have been so humbled during this entire process by all of
                                 the support and positive reactions and excitement from all of you! You make it worth
-                                the early hours and bags under my eyes. I can’t even begin to thank you for allowing
-                                me to do what makes me happiest: making you treats. Thank you to
-                                @theshopbreakfastandlunch @zendo413 @littlebearcoffeeco and @castlecoffeenm for the
+                                the early hours and bags under my eyes.</p>
+                            <p>I can’t even begin to thank you for allowing me to do what makes me happiest: making you
+                                treats. Thank you to <a href="https://www.instagram.com/theshopbreakfastandlunch/">@theshopbreakfastandlunch</a> <a href="https://www.instagram.com/zendo413/">@zendo413</a> <a href="https://www.instagram.com/littlebearcoffeeco/">@littlebearcoffeeco</a> and <a href="https://www.instagram.com/castlecoffeenm/">@castlecoffeenm</a> for the
                                 amazing encouragement and for allowing me to be a part of your small businesses,
-                                too. This community is wonderful and I am so grateful! 🖤 </p>
+                                too. This community is wonderful and I am so grateful!</p>
                             <!--                                <hr>-->
                             <!--                                <h3>How We Work</h3>-->
                             <!--                                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit. Necessitatibus facilis qui laudantium quasi fugiat, illo blanditiis modi ratione pariatur explicabo, animi corporis. Ab voluptatibus officiis, quia sequi. Possimus praesentium labore amet enim quibusdam culpa totam facere earum eius asperiores, est incidunt rerum, placeat cupiditate, aliquid facilis dolores commodi accusamus tempora.</p>-->
@@ -399,9 +424,7 @@
 
                         </div>
 
-                        <div class="col-md-6">
-                            <img src="img/witching-flour/witching-flour-kelly.jpg" alt="Studio Image">
-                        </div>
+
 
                     </div>
 
@@ -457,7 +480,7 @@
 
             <!-- ============ Call to Action - START ============ -->
 
-            <div id="appointment" class="section cta dark">
+            <div id="cake-form" class="section cta dark">
 <!--                <div class="section-title">-->
 <!--                    <h3>custom cake orders</h3>-->
 <!--                </div>-->
@@ -579,7 +602,7 @@
 
             <!-- ============ Artists - START ============ -->
 
-            <div id="artists" class="section">
+            <div id="donuts" class="section">
 
                 <div class="section-title">
                     <h2 class="mb-5">November's donuts</h2>
@@ -588,48 +611,48 @@
                             <div class="col">
                                 <div class="card-deck mb-5 imglist">
                                     <div class="card">
-                                        <a href="img/donuts/witching-flour-nov-1.jpeg" data-fancybox="images" data-caption="Apple cider waffle: Fresh apple brioche, apple cider glaze, fresh apple compote">
+                                        <a href="img/donuts/witching-flour-nov-1.jpeg" data-fancybox="images">
                                             <img src="img/donuts/witching-flour-nov-1.jpeg" class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h6 style="text-transform: none" class="card-title">Apple cider waffle</h6>
-                                            <p style="text-transform: none" class="card-text">Fresh apple brioche, apple cider glaze, fresh apple compote</p>
+                                            <h6 style="text-transform: none; line-height: normal" class="card-title">Apple cider waffle</h6>
+                                            <p style="text-transform: none; line-height: normal" class="card-text">Fresh apple brioche, apple cider glaze, fresh apple compote</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <a href="img/donuts/witching-flour-nov-2.jpeg" data-fancybox="images" data-caption="Everything but the Turkey: Potato brioche, sage and honey glaze, cornbread crumble, fresh cranberry sauce">
+                                        <a href="img/donuts/witching-flour-nov-2.jpeg" data-fancybox="images">
                                             <img src="img/donuts/witching-flour-nov-2.jpeg" class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h6 style="text-transform: none" class="card-title">Everything but the Turkey</h6>
-                                            <p style="text-transform: none" class="card-text">Potato brioche, sage and honey glaze, cornbread crumble, fresh cranberry sauce</p>
+                                            <h6 style="text-transform: none; line-height: normal" class="card-title">Everything but the Turkey</h6>
+                                            <p style="text-transform: none; line-height: normal" class="card-text">Potato brioche, sage and honey glaze, cornbread crumble, fresh cranberry sauce</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <a href="img/donuts/witching-flour-nov-3.jpeg" data-fancybox="images" data-caption="Yellow cake donut: Kabocha squash, chocolate ganache, café de olla butter cream rosette">
+                                        <a href="img/donuts/witching-flour-nov-3.jpeg" data-fancybox="images">
                                             <img src="img/donuts/witching-flour-nov-3.jpeg" class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h6 style="text-transform: none" class="card-title">Yellow cake donut</h6>
-                                            <p style="text-transform: none" class="card-text">Kabocha squash, chocolate ganache, café de olla butter cream rosette</p>
+                                            <h6 style="text-transform: none; line-height: normal" class="card-title">Yellow cake donut</h6>
+                                            <p style="text-transform: none; line-height: normal" class="card-text">Kabocha squash, chocolate ganache, café de olla butter cream rosette</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <a href="img/donuts/witching-flour-nov-4.jpeg" data-fancybox="images" data-caption="Pecan pie donut: Molasses glaze, chopped candied pecans">
+                                        <a href="img/donuts/witching-flour-nov-4.jpeg" data-fancybox="images">
                                             <img src="img/donuts/witching-flour-nov-4.jpeg" class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h6 style="text-transform: none" class="card-title">Pecan pie<br> donut</h6>
-                                            <p style="text-transform: none" class="card-text">Molasses glaze, chopped candied pecans</p>
+                                            <h6 style="text-transform: none; line-height: normal" class="card-title">Pecan pie<br> donut</h6>
+                                            <p style="text-transform: none; line-height: normal" class="card-text">Molasses glaze, chopped candied pecans</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <a href="img/donuts/witching-flour-nov-5.jpeg" data-fancybox="images" data-caption="Marshmallow cream filled: Sourdough brioche, Ruby Chocolate marshmallow cream, coated with sugar">
+                                        <a href="img/donuts/witching-flour-nov-5.jpeg" data-fancybox="images">
                                             <img src="img/donuts/witching-flour-nov-5.jpeg" class="card-img-top" alt="...">
                                         </a>
                                         <div class="card-body">
-                                            <h6 style="text-transform: none" class="card-title">Marshmallow cream filled</h6>
-                                            <p style="text-transform: none" class="card-text">Sourdough brioche, Ruby Chocolate marshmallow cream, coated with sugar</p>
+                                            <h6 style="text-transform: none; line-height: normal" class="card-title">Marshmallow cream filled</h6>
+                                            <p style="text-transform: none; line-height: normal" class="card-text">Sourdough brioche, Ruby Chocolate marshmallow cream, coated with sugar</p>
                                         </div>
                                     </div>
                                 </div>
@@ -659,17 +682,18 @@
                     </div>
 <!--                    <a style="color: #a892a4" href="https://thewitchingflourbakery.square.site/" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'+>Click here</a> to order, limited quantities available!-->
                 </div>
-                <div style="background-color: #ececec" class="section-title">
+                <div id="pies" class="section-title dark">
                     <div class="container">
                         <div class="row">
-                            <div class="col mb-5">
-                                <h2 style="text-transform: none">Thanksgiving Holiday Pies</h2>
-                            </div>
+                            <div class="col pb-5"><h2 style="text-transform: none">Thanksgiving Pies</h2></div>
                         </div>
                         <div class="row">
-                            <div class="col">
-                                <h6 style="text-transform: none">We are offering a limited number of Thanksgiving Pies! They will be available for pickup the day before Thanksgiving (Wed. 11/25) in 4 awesome fall flavors: Apple Cider Streusel, Chocolate Pecan Rye, Raspberry Pear Ginger with Pink Peppercorn, and Brown Butter Pumpkin.</h6>
-                                <a class="btn btn-purple md" href="https://thewitchingflourbakery.square.site/" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>PIES PIES PIES</a>
+                            <div class="col-md-6 text-center my-auto">
+                                <div class="cta-info" style="text-transform: none">We are offering a limited number of Thanksgiving Pies! They will be available for pickup the day before Thanksgiving (Wed. 11/25) in 4 awesome fall flavors: Apple Cider Streusel, Chocolate Pecan Rye, Raspberry Pear Ginger, and Brown Butter Pumpkin.</div>
+                                <a class="btn btn-purple md mt-4" href="https://thewitchingflourbakery.square.site/" target="_blank">Click to order</a>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/witching-flour/holiday-pies.png" alt="Studio Image">
                             </div>
                         </div>
                     </div>
@@ -743,8 +767,8 @@
                                 <img class="rounded" src="img/donuts/littlebear.jpg" width="125" height="125" alt="Tattoo Artist C">
                             </a>
 
-                            <h3 style="margin-bottom: 5px" class="artist-name">Little Bear Coffee Co.</h3>
-                            <p>*ONLY Croissants available @ Little Bear</p>
+                            <h3 style="margin-bottom: 5px" class="artist-name">Little Bear Coffee</h3>
+                            <p>*Croissants ONLY @ this location</p>
                             <!--                                <ul class="social-links">-->
                             <!--                                    <li><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
                             <!--                                    <li><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
